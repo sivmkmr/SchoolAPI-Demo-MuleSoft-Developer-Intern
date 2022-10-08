@@ -1,0 +1,44 @@
+If you want to run on your machine you have to do take few steps
+1- you have to make a database name of school
+MySQL query-  create database school; [press Enter]
+
+API URLs--
+1- POST localhost:8080/save-data
+   you have to pass an Object with these property.
+{
+    "name": "Student Name",
+    "sClass":"Student Class",
+    "rollNo":"Student RollNo",
+    "subject":"Student subject"
+}
+
+There are two Type of Updation API is here One request type is PUT and Second is PATCH 
+
+2- PUT localhost:8080/update-data-by-put/1
+   you have provide ID number on url and post the body of data.
+
+{
+    "name": "Student Name",
+    "sClass":"Student Class",
+    "rollNo":"Student RollNo",
+    "subject":"Student subject"
+}
+
+3- PATCH localhost:8080/update-data-by-patch/2
+   you have also provide ID number on url and post the body of data. Patch is faster than put. 
+{
+    "name": "Student Name",
+    "sClass":"Student Class",
+    "rollNo":"Student RollNo",
+    "subject":"Student subject"
+}
+
+4- GET localhost:8080/get-all-data
+   If you want to see all the data from database you to trigger this url.
+   
+   
+5- GET localhost:8080/get-data-by-id/2
+   If your requirement to see specific data through the Id you have provide id Number on url
+   
+6- DELETE localhost:8080/delete-data-by-id/2
+   Data deletion done by Id number so you have to provide id number on url 
